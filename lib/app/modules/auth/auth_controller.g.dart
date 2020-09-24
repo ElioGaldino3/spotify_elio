@@ -34,6 +34,21 @@ mixin _$AuthController on _AuthControllerBase, Store {
     });
   }
 
+  final _$spotifyTokenAtom = Atom(name: '_AuthControllerBase.spotifyToken');
+
+  @override
+  SpotifyToken get spotifyToken {
+    _$spotifyTokenAtom.reportRead();
+    return super.spotifyToken;
+  }
+
+  @override
+  set spotifyToken(SpotifyToken value) {
+    _$spotifyTokenAtom.reportWrite(value, super.spotifyToken, () {
+      super.spotifyToken = value;
+    });
+  }
+
   final _$_AuthControllerBaseActionController =
       ActionController(name: '_AuthControllerBase');
 
@@ -51,7 +66,8 @@ mixin _$AuthController on _AuthControllerBase, Store {
   @override
   String toString() {
     return '''
-authStatus: ${authStatus}
+authStatus: ${authStatus},
+spotifyToken: ${spotifyToken}
     ''';
   }
 }

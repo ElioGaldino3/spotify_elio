@@ -9,11 +9,17 @@ import 'package:flutter/material.dart';
 import 'package:spotify_elio/app/app_widget.dart';
 
 import 'modules/login/login_controller.dart';
+import 'shared/datasources/get_storage_datasource_impl.dart';
+import 'shared/repositories/datasource_interface/storage_datasource_interface.dart';
+import 'shared/repositories/storage_impl.dart';
+import 'shared/repositories/storage_interface.dart';
 
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
         Bind((i) => Dio()),
+        Bind<IStorageDatasource>((i) => GetStorageDatasourceImpl()),
+        Bind<IStorage>((i) => StorageImpl(i.get())),
         $AuthController,
         $LoginController,
       ];

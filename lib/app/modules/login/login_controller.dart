@@ -1,7 +1,7 @@
 import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spotify_elio/app/modules/auth/auth_controller.dart';
-import 'package:spotify_elio/app/modules/login/repository/storage_interface.dart';
+import 'package:spotify_elio/app/shared/repositories/storage_interface.dart';
 import 'package:spotify_elio/app/shared/models/spotify_token.dart';
 import 'package:spotify_elio/app/shared/utils/auth.dart';
 
