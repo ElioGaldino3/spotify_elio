@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
-import 'package:spotify_elio/app/modules/auth/auth_controller.dart';
+import 'package:spotify_elio/app/shared/controllers/auth_controller.dart';
 import 'package:spotify_elio/app/shared/enums/auth_enum.dart';
 
 class SplashPage extends StatefulWidget {

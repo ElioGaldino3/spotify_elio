@@ -1,8 +1,12 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spotify_elio/app/shared/repositories/storage_interface.dart';
 import 'package:spotify_elio/app/shared/models/spotify_token.dart';
 
 import 'datasource_interface/storage_datasource_interface.dart';
 
+part 'storage_impl.g.dart';
+
+@Injectable()
 class StorageImpl implements IStorage {
   final IStorageDatasource _datasource;
 
